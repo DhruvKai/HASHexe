@@ -153,3 +153,7 @@ Do NOT commit API keys to public source control repositories.
 Follow each provider's documentation about rate limits and usage policies.
 
 Rotate keys if compromised or shared accidentally.
+
+python -m PyInstaller --onefile --add-data "templates;templates" --add-data "static;static" --add-data "config.env;." --hidden-import=uvicorn --hidden-import=fastapi --hidden-import=dotenv --name MyFastAPIApp launch_app.py
+
+
